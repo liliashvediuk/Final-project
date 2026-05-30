@@ -1,0 +1,469 @@
+/* --- БАЗОВІ СТИЛІ ТА СКИДАННЯ --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #ffffff; */
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: "Montserrat";
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Montserrat", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+/* --- КОМПОНЕНТИ --- */
+.btn {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6b800;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #777;
+  padding: 0 15px;
+}
+
+.text-yellow {
+  color: #ffcc00;
+}
+.text-light {
+  color: #ccc;
+}
+
+/* --- 1. HERO SECTION --- */
+.hero-section {
+  /* МІСЦЕ ДЛЯ ФОТО НА ФОНІ */
+  background: url("images/foto.png") no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.hero-title {
+  font-size: 125px;
+  color: #ffc200;
+  font-weight: 400;
+  font-family: "Grand Hotel";
+  margin: bottom 20px;
+}
+
+.hero-text {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* --- 2. BEST SELLER --- */
+.bestseller-section {
+  padding: 60px 20px;
+  color: #333333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.img-container {
+  width: 254px;
+  height: 245px;
+  margin: 0 auto 9px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* --- 3. STATISTICS --- */
+.statistics-section {
+  background: url("images/fon3.png") no-repeat center center/cover;
+  color: #fff;
+
+  min-height: 900px; /* висота секції */
+  padding: 80px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  justify-items: center;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.stat-circle {
+  width: 220px;
+  height: 220px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 51px;
+  font-weight: 100;
+  color: #ffc200;
+}
+
+.stat-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* --- 4. SUBSCRIBE --- */
+.subscribe-section {
+  background: url("images/fon4.png") no-repeat center center/cover;
+  padding: 200px 20px;
+  text-align: center;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  padding: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btn-submit {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* --- 5. FOOTER --- */
+.main-footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+  padding: 60px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-links h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+/* ==========================================================================
+   ↔️ МЕДІА-ЗАПИТИ (Адаптивність під критерій №3: 425px, 768px, 1280px)
+   ========================================================================== */
+
+/* Екрани від 425px (Планшети / великі телефони) */
+@media (min-width: 425px) {
+  .subscribe-form {
+    flex-direction: row;
+  }
+  .subscribe-form input {
+    flex: 1;
+  }
+}
+
+/* Екрани від 768px (Планшети у горизонтальному режимі) */
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Екрани від 1280px та більше (Десктопи) */
+@media (min-width: 1280px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+  .hero-section {
+    min-height: 100vh;
+    padding-left: 10%;
+  }
+  .navbar {
+    padding: 40px 10%;
+  }
+}
+/* Змінюємо шрифт тільки для головного заголовка "Best Seller" */
+.bestseller-section .section-title {
+  font-family: "Grand Hotel", cursive;
+  font-size: 75px; /* тут можна підібрати розмір */
+  font-weight: normal;
+}
+
+/* Змінюємо шрифт тільки для назв страв "Title Here" під кружечками */
+.product-card h3 {
+  font-family: "Grand Hotel", cursive;
+  font-size: 42px; /* розмір для назв страв */
+  font-weight: normal;
+}
+/* 1. Шрифти для секції Statistics */
+
+/* Робимо заголовок "Statistics" шрифтом Grand Hotel */
+.statistics-section .section-title {
+  font-family: "Grand Hotel", cursive;
+  font-size: 54px; /* Гарний великий розмір */
+  font-weight: normal; /* Прибираємо жирність для елегантності */
+}
+
+/* Робимо цифри (123, 100, 300, 30) шрифтом Montserrat */
+.stat-circle .stat-number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Робимо цифри жирними, як на макеті */
+  font-size: 51px; /* Розмір цифр */
+}
+
+/* Робимо підписи під цифрами (CHEF, MENU тощо) також Montserrat */
+.stat-circle .stat-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Звичайна жирність для підписів */
+}
+
+/* Зменшуємо відступ між підзаголовком і колами з цифрами */
+.statistics-section .section-subtitle {
+  margin-bottom: 15px; /* Менша цифра притисне кола ближче до верху */
+  font-size: 20px;
+}
+
+/* Якщо підзаголовка (тексту Lorem) у цій секції немає, тоді зменшимо верхній відступ самих кіл: */
+.stats-grid {
+  margin-top: 10px; /* Притискає всю сітку з цифрами до заголовка */
+}
+
+/* Робимо заголовок "Subscribe" у 4-й секції шрифтом Grand Hotel */
+.subscribe-section .section-title {
+  font-family: "Grand Hotel", cursive;
+  font-size: 100px; /* Гарний великий розмір, як і в інших секціях */
+  font-weight: normal; /* Прибираємо жирність, щоб шрифт був витонченим */
+  margin-bottom: 15px; /* Невеликий відступ знизу до тексту-опису */
+}
+
+/* Робимо заголовок Subscribe чорним */
+.subscribe-section .section-title {
+  color: #000000; /* Чорний колір для тексту */
+}
+
+/* Додаємо тінь для поля введення тексту (Email) */
+.subscribe-form input[type="email"] {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* М'яка тінь навколо поля */
+  border: 1px solid #ddd; /* Легка рамка, щоб поле чітко виділялося */
+  transition: box-shadow 0.3s ease; /* Плавний ефект при кліку */
+}
+
+/* Робимо так, щоб інпут і кнопка злилися в одну лінію */
+.subscribe-form {
+  display: flex;
+  justify-content: center; /* Центруємо всю форму на екрані */
+  align-items: stretch; /* Робимо інпут і кнопку однакової висоти */
+  gap: 0; /* 🚀 Прибираємо будь-яку відстань між ними */
+  max-width: 500px; /* Обмежуємо загальну ширину форми */
+  margin: 0 auto; /* Центруємо форму в самій секції */
+}
+
+/* Налаштування для поля введення */
+.subscribe-form input[type="email"] {
+  margin: 0; /* Прибираємо стандартні відступи */
+  border-radius: 4px 0 0 4px; /* Заокруглюємо тільки ліві кути */
+  border-right: none; /* Прибираємо праву рамку, щоб не було подвійної лінії */
+  flex: 1; /* Щоб поле займало весь доступний простір */
+}
+
+/* Налаштування для кнопки */
+.subscribe-form button {
+  margin: 0; /* Прибираємо стандартні відступи */
+}
+
+/* --- 5. FOOTER / СЕКЦІЯ 5 --- */
+.footer-section {
+  background-color: #f4f4f4; /* 👈 Світло-сірий фон (колір можна змінити на потрібний відтінок) */
+
+  /* 🚀 РОБИМО СЕКЦІЮ ВИЩОЮ: збільшуємо відступи зверху та знизу до 120px */
+  padding: 120px 20px;
+
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 600px; /* Обмежуємо ширину тексту, щоб він гарно переносився */
+  margin: 0 auto;
+}
+
+/* Заголовок у футері */
+.footer-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Звичайний текст (робимо його меншим і акуратним) */
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 40px; /* Відступ знизу до іконок */
+}
+
+/* Стилі для блоку соціальних мереж */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  gap: 20px; /* Відстань між іконками */
+}
+
+/* Стилі для самих круглих кнопочок соцмереж */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000; /* Чорні кружечки, як на багатьох макетах */
+  color: #fff; /* Білі іконки всередині */
+  border-radius: 50%; /* Робимо їх ідеально круглими */
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
